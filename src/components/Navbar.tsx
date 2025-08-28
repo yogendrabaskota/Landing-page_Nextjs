@@ -1,16 +1,16 @@
 export default function Navbar() {
   return (
     <div className="bg-[#242424]">
-      <nav className="bg-white text-black rounded-[100px] border border-black-400 p-[3px] mx-auto w-[1082px] h-66px mt-0 grid gap-[60px]">
+      <nav className="bg-white text-black rounded-[100px] border border-black-400 p-[3px] mx-auto w-[1082px] h-[66px] mt-0 grid gap-[60px]">
         <div className="flex justify-end space-x-7 items-center">
-          <div className="flex space-x-15 mx-auto text-xs p-[10px] h-[38px] w-[333px]">
+          <div className="flex space-x-15 mx-auto text-sm text-[14px] p-[10px] h-[38px] w-[333px]">
             <a
               href="#home"
               className="relative font-medium hover:text-gray-700"
             >
               Home
               {/* Triangle under active link */}
-              <span className="absolute left-1/2 -bottom-3 transform -translate-x-1/2 text-xs">
+              <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 text-sm">
                 ▲
               </span>
             </a>
@@ -27,7 +27,7 @@ export default function Navbar() {
 
           <a
             href="#followme"
-            className="bg-black text-sm text-white px-[21px] py-[10px] m-0 rounded-tr-[50px] rounded-br-[50px] font-medium hover:bg-gray-800 transition-colors"
+            className="bg-black text-sm text-white px-[21px] py-[10px] m-0 rounded-tr-[50px] h-[60px] rounded-br-[50px] font-medium hover:bg-gray-800 transition-colors flex items-center justify-center"
           >
             Follow me
           </a>
