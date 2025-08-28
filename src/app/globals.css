@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+* {
+  font-family: var(--font-abeezee), sans-serif;
+  font-weight: 400;
+}
