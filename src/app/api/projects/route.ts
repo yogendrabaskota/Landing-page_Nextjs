@@ -72,7 +72,7 @@ async function handleJsonRequest(req: Request) {
     data: {
       title,
       description: description || null,
-      category,
+      category: category || "Uncategorized",
     },
   });
 
@@ -119,7 +119,7 @@ async function handleFormDataRequest(req: Request) {
     data: {
       title,
       description: description || null,
-      category,
+      category: category || "Uncategorized",
       imageUrl,
     },
   });
