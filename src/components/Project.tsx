@@ -14,35 +14,6 @@ interface Project {
   link?: string | undefined;
 }
 
-// Sample project data -
-// const projectsData: Project[] = [
-//   {
-//     id: 1,
-//     title: "Site design for IT company",
-//     category: "Website",
-//     description:
-//       "Modern corporate website with clean design and responsive layout",
-//     image: "/project11.png",
-//     link: "#",
-//   },
-//   {
-//     id: 2,
-//     title: "Travel app design",
-//     category: "App Design",
-//     description: "Mobile application UI/UX design for travel booking platform",
-//     image: "/image.png",
-//     link: "#",
-//   },
-//   {
-//     id: 3,
-//     title: "E-commerce Platform",
-//     category: "Website",
-//     description: "Full-stack e-commerce solution with payment integration",
-//     image: "/project11.png",
-//     link: "#",
-//   },
-// ];
-
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="relative group cursor-pointer">
