@@ -8,9 +8,10 @@ import { extractPublicIdFromCloudinaryUrl } from "@/lib/cloudinary.utils";
 // GET- Get single project    API Endpoints-->  /api/projects/:id
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const projectId = parseInt(params.id);
+  const { id } = await params;
+  const projectId = parseInt(id);
 
   if (isNaN(projectId)) {
     return NextResponse.json(
@@ -58,9 +59,10 @@ export async function GET(
 // PATCH -- Update Project  API Endpoint-->  /api/projects/:id
 export async function PATCH(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const projectId = parseInt(params.id);
+  const { id } = await params;
+  const projectId = parseInt(id);
 
   if (isNaN(projectId)) {
     return NextResponse.json(
@@ -211,15 +213,10 @@ async function handleFormDataUpdate(
 
 export async function DELETE(
   req: Request,
-  {
-    params,
-  }: {
-    params: {
-      id: string;
-    };
-  }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const projectId = parseInt(params.id);
+  const { id } = await params;
+  const projectId = parseInt(id);
 
   if (isNaN(projectId)) {
     return NextResponse.json(
