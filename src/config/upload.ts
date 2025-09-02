@@ -35,8 +35,8 @@ export const parseFormData = async (request: NextRequest) => {
   const formData = await request.formData();
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
-  const status = formData.get("status") as string;
+  const category = formData.get("category") as string;
   const image = formData.get("image") as File | null;
 
-  return { title, description, status, image };
+  return { title, description, category, image };
 };
