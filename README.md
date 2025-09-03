@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page
 
-## Getting Started
+This is a modern landing page built as a full-stack application. It leverages Next.js for both the frontend and API routes, with a PostgreSQL database managed through Prisma for robust data handling.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?style=for-the-badge&logo=postgresql)
+
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)
+
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
+
+## 🛠️ Built With
+
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Database:** [PostgreSQL](https://www.postgresql.org/)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+- **Node.js** (v18 or higher recommended)
+- **PostgreSQL** (v12 or higher)
+- **npm** or **yarn** or **pnpm**
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yogendrabaskota/Landing-page_Nextjs.git
+   cd Landing-page_Nextjs
+   ```
+2. **Install dependencies**
+
+```bash
+npm install
+
+```
+
+3. **Start Project**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔌 API Integration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The frontend is designed to connect with a backend API. The expected endpoints include:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Method | Endpoint            | Description         |
+| ------ | ------------------- | ------------------- |
+| GET    | `/api/projects`     | Fetch all projects  |
+| GET    | `/api/projects/:id` | Get single pothole  |
+| POST   | `/api/projects`     | Create new projects |
+| PATCH  | `/api/projects/:id` | Update projects     |
+| DELETE | `/api/projects/:id` | Delete projects     |
 
-## Learn More
+### Environment Variables (.env)
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env` file in the root directory to configure the API connection and database. Use the provided `.env.example` as a template.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**API Documentation:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<div align="left">
+  <a href="https://documenter.getpostman.com/view/33322053/2sB3HjMLw9" target="_blank">
+    <img src="https://run.pstmn.io/button.svg" alt="Run in Postman" width="150">
+    <br>
+    <strong>View Interactive API Docs</strong>
+  </a>
+</div>
 
-## Deploy on Vercel
+## Feedback
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you have any feedback, please reach out to me at yogendrabaskota18@gmail.com

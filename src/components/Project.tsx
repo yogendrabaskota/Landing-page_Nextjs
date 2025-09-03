@@ -73,9 +73,10 @@ const Project = () => {
   }, []);
 
   const fetchProjects = async () => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
     try {
       setLoading(true);
-      const response = await fetch("/api/projects");
+      const response = await fetch(`${API_URL}/api/projects`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch projects");
